@@ -1,0 +1,191 @@
+.interface-box {
+    background: url(../images/black_scales.png);
+    border-image: url('../images/frame.png') 93 92 87 92 stretch stretch;
+    border-style: inset;
+    border-width: 40px;
+    color: white;
+}
+
+
+/************** MENU DE DEMARRAGE **************/
+
+.interface-menu {
+    height: 440px;
+    margin: 0 auto;
+    width: 600px;
+}
+
+.interface-menu .remaining-points {
+    color: #FFDD00;
+}
+
+.interface-menu .start {
+    padding: 0.5em 1em;
+}
+
+.interface-menu fieldset {
+    border-width: 0;
+    padding: 0;
+}
+.interface-menu fieldset legend {
+    /* structure */
+    width: 100%;
+
+    /* presentation */
+    color: #FFA900;
+    font-size: 2em;
+    text-align: center;
+}
+
+.interface-menu ul {
+    /* structure */
+    margin-top: 2em;
+    padding-left: 0;
+
+    /* presentation */
+    list-style-type: none;
+}
+.interface-menu ul li {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+.interface-menu ul li:last-child {
+    /* structre */
+    margin-top: 2em;
+
+    /* presentation */
+    text-align: center;
+}
+.interface-menu ul li button {
+    /* structure */
+    display: inline-block;
+    padding: 0 0.5em;
+
+    /* presentation */
+    background-color: #FF6200;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 0 black;
+    color: white;
+    font-weight: bold;
+    line-height: 1.5em;
+    text-decoration: none;
+    transition: background-color 0.25s, box-shadow 0.25s;
+    vertical-align: middle;
+}
+.interface-menu ul li button:hover {
+    background-color: #FFA900;
+    box-shadow: 0 0 4px 2px #FFDD00;
+    color: white;
+}
+.interface-menu ul li button + button {
+    margin-left: 0.5em;
+}
+.interface-menu ul li input {
+    color: black;
+}
+.interface-menu ul li input[type=text]
+{
+    /* structure */
+    padding: 0.25em;
+    width: 165px;
+
+    /* presentation */
+    background-color: whitesmoke;
+    border-style: none;
+    border-radius: 4px;
+    color: black;
+    transition: background-color 0.25s;
+}
+.interface-menu ul li input[type=text]:focus
+{
+    background-color: #FFA900;
+}
+.interface-menu ul li label:not(.radio) {
+    /* structure */
+    display: inline-block;
+    width: 12em;
+
+    /* presentation */
+    text-align: right;
+}
+.interface-menu ul li p {
+    color: #FFA900;
+    text-align: center;
+}
+
+/************** INTERFACE DE JEU **************/
+
+main {
+    width: 1116px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.interface-map {
+    float: left;
+    margin-right: 16px;
+}
+
+.interface-map table
+{
+    margin-top: 0.5em;
+}
+.interface-map table td,
+.interface-map table th
+{
+    /* structure */
+    width: 160px;
+
+    /* presentation */
+    text-align: center;
+}
+.interface-map table td
+{
+    font-size: 0.85em;
+}
+.interface-map table th.disabled
+{
+    color: silver;
+    text-shadow: 0 0 6px silver;
+}
+.interface-map table th.dragon
+{
+    color: #D63800;
+    text-shadow: 0 0 6px #D63800;
+}
+.interface-map table th.player
+{
+    color: #1FD682;
+    text-shadow: 0 0 6px #1FD682;
+}
+
+.interface-message-panel {
+    float: left;
+    height: 615px; /* 520px + 2 * 20px negative margin */
+    width: 340px; /* 240px + 2 * 20px negative margin */
+}
+.interface-message-panel ul {
+    /* structure */
+
+    margin: -10px;
+    padding-left: 0;
+    width: 280px; /* 240px + 2 * 20px negative margin */
+
+    /* presentation */
+    list-style-type: none;
+}
+.interface-message-panel ul li {
+    font-size: 0.85em;
+}
+.message-important{
+    font-weight: bold;
+    color: #FFA900;
+    margin-bottom: 10px;
+}
+.message-bad{
+    color: #ce0100;
+}
+.message-good{
+    color : #85cc34;
+}

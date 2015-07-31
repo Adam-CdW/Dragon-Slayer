@@ -1,0 +1,143 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <!--<![endif]-->
+<html class='no-js' lang="FR-fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <![endif]-->
+    <title>Dragon Slayer, a Javascript Game</title>
+
+    <!-- "Favicon" -->
+    <link rel="icon" type="image/png" href="images/Sword.png">
+
+    <!-- Google font 'Berkshire Swash' et 'Open Sans' -->
+    <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Normalize.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+
+    <!-- Main style et INTERFACE -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/dragon-slayer.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/interface.css">
+
+    <!--Jquery-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <!-- JS LIBRARY & DATA -->
+    <script src="js/library/utilities.js"></script>
+    <script src="js/dragon-slayer-data.js"></script>
+
+    <!-- JS GAME -->
+    <script src="js/game/Game.class.js"></script>
+    <script src="js/game/Player.class.js"></script>
+    <script src="js/game/Dragon.class.js"></script>
+    <script src="js/game/World.class.js"></script>
+
+
+    <!-- JS INTERFACE -->
+    <script src="js/interface/Menu.class.js"></script>
+    <script src="js/interface/MessagePanel.class.js"></script>
+    <script src="js/interface/Map.class.js"></script>
+    <script src="js/interface/Arena.class.js"></script>
+
+</head>
+
+<body>
+    <noscript>
+        <em class="fa fa-exclamation-triangle fa-2x"></em>Pour pouvoir jouer, vous devez activer "javascript"
+    </noscript>
+
+    <header>
+        <h1><a href="dragon-slayer.html" title="Redémarrer le jeu">Dragon Slayer</a></h1>
+    </header>
+
+    <form id="js-interface-menu" class="interface-menu interface-box">
+        <fieldset>
+            <legend><i class="fa fa-gamepad"></i> Menu de démarrage</legend>
+            <ul>
+                <li>
+                    <label for="nick-name">Votre pseudo :</label>
+                    <input id="nick-name" type="text" name="nickName" maxlength="10"/>
+                </li>
+
+                <li>
+                    <label for="strength">Force :</label>
+                    <meter id="strength" value="10" min="1" max="15"></meter>
+                    <span class="strength-value"></span>
+                    <button class="meter-control" data-action="decrease" data-meter="strength">-</button>
+                    <button class="meter-control" data-action="increase" data-meter="strength">+</button>
+                </li>
+
+                <li>
+                    <label for="agility">Agilité :</label>
+                    <meter id="agility" value="10" min="1" max="15"></meter>
+                    <span class="agility-value"></span>
+                    <button class="meter-control" data-action="decrease" data-meter="agility">-</button>
+                    <button class="meter-control" data-action="increase" data-meter="agility">+</button>
+                </li>
+
+                <li><p>Il vous reste <strong class="remaining-points"></strong> point(s) à répartir</p></li>
+
+                <li>
+                    <label for="difficulty-normal">Niveau de difficulté :</label>
+
+                    <input id="difficulty-easy" type="radio" name="difficulty" value="easy">
+                    <label class="radio" for="difficulty-easy">Baby</label>
+
+                    <input id="difficulty-normal" type="radio" name="difficulty" value="normal" checked>
+                    <label class="radio" for="difficulty-normal">Slayer</label>
+
+                    <input id="difficulty-hard" type="radio" name="difficulty" value="hard">
+                    <label class="radio" for="difficulty-hard">Nightmare</label>
+                </li>
+
+                <li>
+                    <button class="start">Démarrer <i class="fa fa-bolt"></i></button>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+
+    <main class="hide">
+
+        <section class="interface-box interface-map" id="js-interface-map">
+            <canvas width="640" height="480"></canvas>
+            <table>
+                <thead>
+                <tr>
+                    <th class="disabled">PV Dragon</th>
+                    <th class="player">PV Joueur</th>
+                    <th class="disabled">Armure</th>
+                    <th class="disabled">Epée</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <aside id="js-interface-message-panel" class="interface-message-panel interface-box">
+            <ul>
+            </ul>
+        </aside>
+
+    </main>
+
+    <script src="js/dragon-slayer.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    /* presentation */
+    font-family: 'Open Sans', sans-serif;
+}
+
+canvas:hover {
+    cursor: default;
+}
+
+h1, h2, h3, legend {
+    font-family: 'Berkshire Swash', cursive;
+    letter-spacing: 0.1em;
+}
+
+h1 {
+    /* structure */
+    margin: 10px 0 25px;
+
+    /* presentation */
+    color: #150100;
+    cursor: default;
+    font-size: 48px;
+    text-align: center;
+    text-shadow: 0 0 5px #b00100;
+    transition-duration: 0.5s;
+}
+h1:hover{
+    text-shadow: 0 0 10px #b00100;
+}
+
+html {
+    /* structure */
+    height: 100%;
+    overflow-y: scroll;
+
+    /* presentation */
+    background: transparent url("../images/background.jpg") no-repeat fixed center center / cover;
+}
+
+/************** CLASSES UTILITAIRES **************/
+
+.hide {
+    display: none;
+}
